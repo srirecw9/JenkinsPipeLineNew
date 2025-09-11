@@ -1,3 +1,4 @@
-FROM openjdk:21
-COPY target/spring-devops1.jar spring-devops1.jar
-ENTRYPOINT ["java","-jar","/spring-devops1.jar"]
+FROM openjdk:17-jdk-slim
+ADD target/spring-devops.jar spring-devops.jar
+CMD ["java","-jar","/spring-devops.jar"]
+EXPOSE 8080
